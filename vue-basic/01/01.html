@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>01</title>
+        <!-- 引入vue -->
+        <script type="text/javascript" src="../01/js/vue.js"></script>
+    </head>
+    <body>
+        <div id="root">
+            <h1>{{name}}</h1>
+			<a v-bind:href="url">here</a>
+			<input type="text" v-model:value="url"/>
+        </div>
+
+        <script type="text/javascript">
+            Vue.config.productionTip = false
+			
+			const x = new Vue({
+				el:'#root',
+				data:function(){
+					return{
+						name:'hello',
+						url:'http://www.baidu.com/'
+					}
+				},
+
+			})
+        </script>
+
+    </body>
+</html>
