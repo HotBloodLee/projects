@@ -35,3 +35,13 @@
     引入（App.vue）
     注册
     使用
+
+5：路由组件的搭建
+    vue-router：
+    home、search、login、register
+    cnpm install --save vue-router@3
+    路由组件一般放在pages/views文件夹
+    配置的路由一般放在router文件夹
+    index,js：配置路由
+    main.js：引入路由
+    App.vue：展示路由出口
