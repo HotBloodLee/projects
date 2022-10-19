@@ -104,7 +104,7 @@
     background-color: #eaeaea;
 
     .footer-container {
-        width: 1200px;
+        width: 90%;
         margin: 0 auto;
         padding: 0 15px;
 

@@ -4,22 +4,21 @@
     <div class="top">
       <div class="container">
         <div class="loginList">
-          <p>尚品汇欢迎您！</p>
           <p>
-            <span>请</span>
-            <router-link to="/login">登录</router-link>
-            <router-link to="/register" class="register">免费注册</router-link>
+            <router-link to="/home" class="font">上课吧</router-link>
+          </p>
+          <p>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <router-link to="/login" class="font">首页</router-link>
+            <router-link to="/register" class="register font"
+              >会员中心</router-link
+            >
           </p>
         </div>
         <div class="typeList">
-          <a href="###">我的订单</a>
-          <a href="###">我的购物车</a>
-          <a href="###">我的尚品汇</a>
-          <a href="###">尚品汇会员</a>
-          <a href="###">企业采购</a>
-          <a href="###">关注尚品汇</a>
-          <a href="###">合作招商</a>
-          <a href="###">商家后台</a>
+          <a href="###">登录</a>
+          <a href="###">注册</a>
+          <a href="###">关于</a>
         </div>
       </div>
     </div>
@@ -32,8 +31,17 @@
       </h1>
       <div class="searchArea">
         <form action="###" class="searchForm">
-          <input type="text" id="autocomplete" class="input-error input-xxlarge" />
-          <button class="sui-btn btn-xlarge btn-danger" type="button" @click="goSearch">
+          <input
+            type="text"
+            id="autocomplete"
+            class="input-error input-xxlarge"
+            placeholder="课程名"
+          />
+          <button
+            class="sui-btn btn-xlarge btn-danger"
+            type="button"
+            @click="goSearch"
+          >
             搜索
           </button>
         </form>
@@ -48,59 +56,64 @@ export default {
   methods: {
     // 搜索按钮的回调函数，向search路由进行跳转
     goSearch() {
-      this.$router.push('/search');
+      this.$router.push("/search");
     },
-  }
-
-
-}
+  },
+};
 </script>
 
 <style lang="less" scoped>
 .header {
-  &>.top {
-    background-color: #eaeaea;
-    height: 30px;
-    line-height: 30px;
+  & > .top {
+    background-color: #383838;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #d1d1d1;
 
     .container {
-      width: 1200px;
+      width: 100%;
       margin: 0 auto;
       overflow: hidden;
 
       .loginList {
         float: left;
+        margin-left: 2%;
 
         p {
           float: left;
           margin-right: 10px;
 
+          .font {
+            color: #d1d1d1;
+          }
+
           .register {
-            border-left: 1px solid #b3aeae;
-            padding: 0 5px;
-            margin-left: 5px;
+            border-left: 1px solid #eeeeee;
+            padding: 0 15px;
+            margin-left: 15px;
           }
         }
       }
 
       .typeList {
         float: right;
+        margin-right: 2%;
 
         a {
           padding: 0 10px;
+          color: #d1d1d1;
 
-          &+a {
-            border-left: 1px solid #b3aeae;
+          & + a {
+            border-left: 1px solid #eeeeee;
           }
         }
-
       }
-
     }
   }
 
-  &>.bottom {
-    width: 1200px;
+  & > .bottom {
+    width: 100%;
     margin: 0 auto;
     overflow: hidden;
 
